@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+    nodeserver:
+      image: backend
+      build:
+        context: ./api
+      ports:
+        - "4000:4000"
+    front:
+      image: frontend
+      restart: always
+      build:
+         context: ./myblog
+      ports:
+        - "3000:3000"
+     
+
+
+
